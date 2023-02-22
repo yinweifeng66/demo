@@ -1,0 +1,43 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+    min-response-size: 1KB
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+  tomcat:
+    max-connections: 8192
+    uri-encoding: UTF-8
+    threads:
+      min-spare: 50
+      max: 1000
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/demo?serverTimezone=GMT%2B8&characterEncoding=utf8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 1
+      min-idle: 5
+      max-active: 20
+      test-on-borrow: true
+      validation-query: select 1
+  profiles:
+    active: test
+  task:
+    execution:
+      pool:
+        max-size: 10
+        queue-capacity: 1
+      thread-name-prefix:
+  freemarker:
+    suffix: .ftl
+  servlet:
+    multipart:
+      max-file-size: 20MB
+mybatis-plus:
+  type-aliases-package: org.snaker.engine.entity
+  # ֧��ͳ��� * ���� ; �ָ�
+  typeEnumsPackage: net.ybjt.admin.module.enums
