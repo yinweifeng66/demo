@@ -51,7 +51,6 @@ public class UserController {
         }
         Boolean aBoolean = userService.playOrder(order);
         System.out.println("合并测试");
-        System.out.println("合并测试2");
         return aBoolean;
     }
     /**
