@@ -49,7 +49,6 @@ public class UserController {
         if(ObjectUtils.isEmpty(order)){
             System.out.println("参数不能为空！本地方使用公共的响应体Result，通过配置全局异常监听进行对应Result返回");
         }
-        System.out.println("第一次上传");
         Boolean aBoolean = userService.playOrder(order);
         System.out.println("合并测试");
         return aBoolean;
