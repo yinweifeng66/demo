@@ -53,6 +53,15 @@ public class UserController {
         System.out.println("合并测试");
         return aBoolean;
     }
+
+    /**
+     * 购买商品
+     */
+    @PostMapping("/test")
+    public String test(@RequestBody Order order) throws Exception {
+
+        return "hello";
+    }
     /**
      * 退单
      */
