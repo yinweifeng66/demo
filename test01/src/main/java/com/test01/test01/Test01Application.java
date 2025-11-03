@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Test01Application {
 
 	public static void main(String[] args) {
+		System.out.println("测试提交非主分支");
 		SpringApplication.run(Test01Application.class, args);
 	}
 
